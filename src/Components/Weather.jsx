@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
+import bgImage from '../assets/bg-image.jpg'
 
 const Weather = () => {
     const [error, setError] = useState('');
@@ -33,7 +34,7 @@ const Weather = () => {
     }
 
     return (
-        <div className='p-8 h-screen md:px-96 bg-cover bg-center' style={{ backgroundImage: `url('/src/assets/bg-image.jpg')`}} >
+        <div className='p-8 h-screen md:px-96 bg-cover bg-center' style={{ backgroundImage: `url(${bgImage})`}} >
             <div className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-0'></div>
             <div className='relative search-bar rounded-full bg-white bg-opacity-15 z-10'>
                 <form onSubmit={searchLocation} className='flex' name='input'>
